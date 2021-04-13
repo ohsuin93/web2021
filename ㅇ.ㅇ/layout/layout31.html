@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout27</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <style>
+        * {margin: 0; padding: 0;}
+
+        em {font-style: normal;}
+
+        .nanumsquare {
+        font-family: 'NanumSquare', sans-serif !important;
+        }
+
+        #wrap {}
+
+        #main {}
+
+        #header {
+            height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #header .logo {
+            width: 30%;
+            font-size: 25px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        #header .menu {
+            width: 50%;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        #header .menu a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        #header .menu strong {
+            color: #19cf60;
+            
+        }
+
+        #header .log a {
+            font-size: 18px;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #000;
+            padding: 10px 20px 10px 20px;
+            border-radius: 50px;
+        }
+
+        #nav {
+            height: 60px;
+            background: hsla(0,0%,100%,.95);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        #nav strong {
+            color: #19cf60;
+        }
+
+        #banner {
+            text-align: center;
+            color: #fff;
+            height: 500px;
+            background-image: linear-gradient(180deg,#7e96ff 9%,#6179f8 73%);
+        }
+        #banner .ban_sub {
+            padding-top: 50px;
+        }
+        #banner .ban_tit {
+            padding-top: 30px;
+            font-size: 45px;
+            font-weight: 500;
+        }
+        #banner .ban_text {
+            padding-top: 30px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        #banner .ban_s_text {
+            padding-top: 20px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        #banner .ban_btn {
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #6179f8;
+            background: #fff;
+            border-radius: 30px;
+            width: 200px;
+            padding: 10px 5px;
+            display: inline-block;
+        }
+        
+
+        #content {
+            background: #f1f3ff;
+            height: 600px;
+            box-sizing: border-box;
+        }
+        #content .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #content .left {
+            padding-top: 150px;
+            padding-right: 20px;
+            width: 48%;
+            float: left;
+        }
+        #content .left img {
+            width: 100%;
+        }
+
+        #content .right{
+            padding-top: 150px;
+            width: 48%;
+            float: left;
+        }
+
+        #content .right .right1{
+            margin-top: 15px;
+            padding: 20px 0;
+            background: #fff;
+            border-radius: 15px;
+            width: 350px;
+            height: 50px;
+            display: inline-block;
+        }
+
+        #content .right .right1 .quest {
+            width: 55%;
+            padding: 8px 0 8px 20px;
+            float: left;
+            position: relative;
+        }
+
+        #content .right .right1 .answer {
+            width: 30%;
+            color: #4b65f7;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 50px;
+            float: left;
+        }
+
+        #content .right .right1 .quest strong:nth-child(2):before {
+            content: '';
+            position: absolute;
+            left: 20px; bottom: 8px;
+            background: rgba(75,101,247,.2);
+            width: 150px; height: 8px;
+        }
+
+        #content .right .right1 .quest strong:nth-child(1):before {
+            content: '';
+            position: absolute;
+            left: 20px; top: 18px;
+            background: rgba(75,101,247,.2);
+            width: 170px; height: 8px;
+        }
+
+        #content .right .right1 .quest em::before{
+            content: '';
+            position: absolute;
+            left: 20px; bottom: 8px;
+            background: rgba(75,101,247,.2);
+            width: 185px; height: 8px;
+        }
+
+        #footer {
+            background: #000;
+            color: #666;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #footer .top {
+            text-transform: uppercase;
+            padding: 20px 0;
+        }
+
+        #footer .log_btn {
+            margin-top: 10px;
+            color: #999;
+            background: #323232;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        #footer .copy {
+            margin-top: 20px;
+        }
+
+        #footer .naver {
+            padding: 10px 0;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <div class="logo">
+                    <p>naver<br>influencer center</p>
+                </div>
+                <div class="menu">
+                    <a href="#">인플루언서 안내</a>
+                    <a href="#">광고수익 혜택</a>
+                    <a href="#"><strong>성장지원 프로그램</strong></a>
+                    <a href="#">브랜드커넥트</a>
+                    <a href="#">공지</a>
+                </div>
+                <div class="log">
+                    <a href="#">인플루언서로 로그인</a>
+                </div>
+            </header>
+            <nav id="nav">
+                <a href="#">크리에이터 워크숍</a>
+                <a href="#">슈퍼애드</a>
+                <a href="#"><strong>엑스퍼트 컨설팅</strong></a>
+                <a href="#">멤버십 혜택</a>
+                <a href="#">어워드</a>
+            </nav>
+            <aside id="banner">
+                <p class="ban_sub">
+                    엑스퍼트 컨설팅
+                </p>
+                <h3 class="ban_tit">
+                    법률, 세무부터 동영상 제작까지!<br>
+                    지식 iN 엑스퍼트 상담, 클래스 이용을 지원합니다.
+                </h3>
+                <p class="ban_text">
+                    혼자서는 해결하기 어려웠던 문제들,<br>
+                    1인 최대 10만원의 엑스퍼트 쿠폰으로 전문가의 도움을 받아보세요.
+                </p>
+                <p class="ban_s_text">
+                    지급 조건 상세보기
+                </p>
+                <div class="ban_btn">
+                    내 eXpert 쿠폰 확인하기
+                </div>
+            </aside>
+            <section id="content">
+                <article class="container">
+                    <article class="left">
+                        <figure>
+                            <img src="https://ncreatorsnext.pstatic.net/img/support_p@3x.b73b570f3bcd8c3cba47709c1e8b98d9.png" alt="이미지">
+                        </figure>
+                    </article>
+                    <article class="right">
+                        <div class="right1">
+                            <p class="quest">이 이미지 쓰고 싶은데<br>
+                            <strong>저작권에 문제 없을까요?</strong></p>
+                            <p class="answer">법률 상담 받기 ></p>
+                        </div>
+                        <div class="right1">
+                            <p class="quest"><strong>광고 수익에 대한 세금 신고</strong><br>
+                                꼭 해야하나요? 어떻게 하죠?</p>
+                                <p class="answer">세무 상담 받기 ></p>
+                        </div>
+                        <div class="right1">
+                            <p class="quest">영상 콘텐츠 만들고 싶은데,<br>
+                                <em>동영상 제작을 배우고 싶어요!</em></p>
+                                <p class="answer">동영상 제작 상담 ></p>
+                        </div>
+                    </article>
+                </article>
+            </section>
+            <footer id="footer">
+                <p class="top">top</p>
+                <p class="log_btn">로그인</p>
+                <p class="copy">NAVER Copyright © NAVER Corp. All Rights Reserved.</p>
+                <p class="naver">NAVER</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

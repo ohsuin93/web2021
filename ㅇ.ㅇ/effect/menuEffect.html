@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Effect 01 - jQuery</title>
+    <style>
+      @font-face {
+        font-family: "GmarketSansMedium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        padding: 0;
+        motion: 0;
+      }
+
+      body {
+        position: relative;
+        background: url(img/img_h01.png) no-repeat center center;
+        background-size: cover;
+        height: 100vh; /*100등분*/
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(133, 133, 133, 0.1);
+        z-index: -1;
+      }
+
+      /* .info */
+      .info {
+        position: absolute;
+        color: #fff;
+        font-family: "GmarketSansMedium";
+      }
+      .info.left {
+        left: 20px;
+        top: 20px;
+      }
+      .info.right {
+        right: 20px;
+        top: 20px;
+      }
+      .info.bottom {
+        left: 20px;
+        bottom: 20px;
+      }
+      .info li {
+        font-size: 1rem; /*rem : 전체 16px*/
+        line-height: 1.4;
+        list-style: none;
+      }
+      .info li a {
+        text-decoration: none;
+        color: #fff;
+        border: 1px dashed #fff;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 27px;
+        display: inline-block;
+        font-size: 0.8rem;
+        margin: 3px;
+      }
+
+      @media(max-width: 600px){
+        .info.right {display: none;} 
+      }
+
+      /* option */
+
+      #tab-menu {
+        max-width: 600px;  /* 반응형 */
+        background: #eaa100;
+        position: absolute;
+        left: 50%;
+        top: 20vh;
+        transform: translate(-50%);
+        border-radius: 5px;
+        font-family: "GmarketSansMedium";
+      }
+
+      #tab-btn ul {
+        display: flex;
+      }
+      #tab-btn li {
+        flex-basis: 20%;
+        text-align: center;
+        list-style: none;
+      }
+      #tab-btn li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px 20px 15px 20px;
+        display: block;
+      }
+      #tab-btn li.active a {
+        border-bottom: 3px solid #2d110e;
+        color: #2b110e;
+      }
+      #tab-cont {
+        background: #fff;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      #tab-cont > div {
+        display: none;
+      }
+      #tab-cont > div:nth-child(1) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <dev class="info left">
+      <h1>Tab Menu Effect01 - jQuery</h1>
+      <p>탭 메뉴 이펙트</p>
+    </dev>
+
+    <nav class="info right">
+      <ul>
+        <li>
+          <a href="menuEffect01-jquery.html">1</a>
+          <a href="menuEffect01-javascript.html">1</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">2</a>
+          <a href="menuEffect01-javascript.html">2</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">3</a>
+          <a href="menuEffect01-javascript.html">3</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">4</a>
+          <a href="menuEffect01-javascript.html">4</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">5</a>
+          <a href="menuEffect01-javascript.html">5</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">6</a>
+          <a href="menuEffect01-javascript.html">6</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">7</a>
+          <a href="menuEffect01-javascript.html">7</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">8</a>
+          <a href="menuEffect01-javascript.html">8</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">9</a>
+          <a href="menuEffect01-javascript.html">9</a>
+        </li>
+        <li>
+          <a href="menuEffect01-jquery.html">10</a>
+          <a href="menuEffect01-javascript.html">10</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- contents-->
+    <section class="contents">
+      <div id="tab-menu">
+        <div id="tab-btn">
+          <ul>
+            <li class="active"><a href="#">Tab1</a></li>
+            <li><a href="#">Tab2</a></li>
+            <li><a href="#">Tab3</a></li>
+            <li><a href="#">Tab4</a></li>
+            <li><a href="#">Tab5</a></li>
+          </ul>
+        </div>
+        <div id="tab-cont">
+          <div>
+            1. display: inline과 display: block의 차이점은 무엇인가요?display:
+            inline과 display: block의 차이점은 무엇인가요?display: inline과
+            display: block의 차이점은 무엇인가요?
+          </div>
+          <div>
+            2.계를 마비시켰던 ‘에버기븐’호가 성공적으로 다시 떠올랐다. 각국
+            증시와 유가는 운하 재운영 기대감에 반대 방향으로 움직였다.
+          </div>
+          <div>
+            3.지난 6년간 한국토지주택공사(LH)의 설계용역의 절반 이상을 LH
+            '전관'을 영입한 건설업체에서 수주했다는 주장이 나왔다.
+          </div>
+          <div>
+            4.경실련은 시사저널이 입수한 '설계사 OB 영입 현황' 자료를 바탕으로
+            이런 분석을 했다. 47개 건축사사무소가 약 90명의 LH 전관을 영입했다는
+            게 경실련의 설명이다.
+          </div>
+          <div>
+            5.특히 변창흠 국토교통부 장관이 LH 사장으로 있던 2019∼2020년에 LH
+            전관 영입업체가 수주한 사업 건수·사업금액 증가가 두드러졌으며
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //contents-->
+  </body>
+</html>

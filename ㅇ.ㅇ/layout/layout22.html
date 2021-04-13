@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      #wrap {
+        width: 100%;
+        background-color: #e8f5e9;
+      }
+      #main {
+        width: 100%;
+      }
+      header {
+        width: 100%;
+        height: 100px;
+        background-color: #c8e6c9;
+      }
+      aside {
+        float: left;
+        width: 30%;
+        height: 600px;
+        background-color: #81c784;
+      }
+      article {
+        float: left;
+        width: 40%;
+        height: 600px;
+        background-color: #a5d6a7;
+      }
+      section {
+        float: left;
+        width: 30%;
+        height: 600px;
+        background-color: #7edd81;
+      }
+      footer {
+        width: 100%;
+        height: 100px;
+        background-color: #66bb6a;
+        clear: both;
+      }
+
+      /* 화면 너비 0~1200px */
+
+      @media (max-width: 1200px) {
+        #main {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 900px) {
+        aside {
+          width: 30%;
+        }
+        article {
+          width: 70%;  /* 3+7 꽉차서 밑으로 자동으로 내려감 */
+        }
+        section {
+          width: 100%;
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        aside {
+          float: none;
+          width: 100%;
+          height: 300px;
+        }
+        article {
+          float: none;
+          width: 100%;
+          height: 300px;
+        }
+        section {
+          float: none;
+          width: 100%;
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <main class="clearfix">
+        <header></header>
+        <aside></aside>
+        <article></article>
+        <section></section>
+        <footer></footer>
+      </main>
+    </div>
+  </body>
+</html>

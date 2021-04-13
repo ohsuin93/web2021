@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout09</title>
+    <style>
+        #wrap{
+            color: #fff;
+            font-size: 20px;
+            ;
+        }
+        #header{
+            width: 1000px;
+            height: 100px;
+            background-color: #111;
+            line-height: 100px;
+            text-align: center;
+        }
+        #nav{
+            width: 1000px;
+            height: 100px;
+            background-color: #222;
+            line-height: 100px;
+            text-align: center;
+        }
+        #side{
+            width: 400px;
+            height: 700px;
+            background-color: #333;
+            float: left;
+            line-height: 700px;
+            text-align: center;
+        }
+        #content{
+            width: 600px;
+            height: 700px;
+            background-color: #444;
+            float: left;
+            text-align: center;
+        }
+        #content1{
+            width: 600px;
+            height: 350px;
+            line-height: 350px;
+            background-color: #555;
+        }
+        #content2{
+            width: 600px;
+            height: 350px;
+            background-color: #666;
+        }
+        #con1{
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-top: 80px;
+            margin-bottom: 300px;
+            margin-left: 60px;
+            line-height: 200px;
+            background-color: #dddd
+            
+        }
+        #con2{
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-top: 80px;
+            margin-bottom: 300px;
+            margin-left: 60px;
+            line-height: 200px;
+            background-color: #dddd
+        }
+        #footer{
+            width: 1000px;
+            height: 100px;
+            background-color: #555;
+            clear: both;
+            line-height: 100px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side">side</div>
+        <div id="content">
+            <div id="content1">content1</div>
+            <div id="content2">
+                <div id="con1">con1</div>
+                <div id="con2">con2</div>
+            </div>
+        </div>
+        <div id="footer">footer</div>
+    </div>
+        
+</body>
+</html>

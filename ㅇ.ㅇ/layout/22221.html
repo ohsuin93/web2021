@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 1200px;
+            
+            margin: 0 auto;
+        }
+        header{
+            height: 200px;
+            background-color: #111;
+        }
+        article {
+            overflow: hidden;
+        }
+        .art1{
+            width: 30%;
+            height: 300px;
+            background-color: rgb(158, 72, 72);
+            float: left;
+        }
+        .art2{
+            width: 70%;
+            height: 150px;
+            background-color: rgb(106, 245, 88);
+            float: left;
+        }
+        .art3{
+            width: 70%;
+            height: 150px;
+            background-color: rgb(33, 79, 207);float: left;
+        }
+        section{
+            overflow: hidden;
+        }
+        .sec1{
+            width: 33.333%;
+            height: 100px;
+            background: rgb(245, 231, 43);
+            float: left;
+        }
+        .sec2{
+            width: 33.333%;
+            height: 100px;
+            background: rgb(163, 152, 2);
+            float: left;
+        }
+        .sec3{
+            width: 33.333%;
+            height: 100px;
+            background: rgb(102, 96, 15);
+            float: left;
+        }
+        article{
+            background-color: rgb(238, 206, 206);
+            overflow: hidden;
+        }
+        .box1{
+            width: 23%;
+            height: 100px;
+            margin: 1%;
+            background-color: #111;
+            float: left;
+        }
+        .box2{
+            width: 23%;
+            height: 100px;
+            margin: 1%;
+            background-color: #111;
+            float: left;
+        }
+        .box3{
+            width: 23%;
+            height: 100px;
+            margin: 1%;
+            background-color: #111;
+            float: left;
+        }
+        .box4{
+            width: 23%;
+            height: 100px;
+            margin: 1%;
+            background-color: #111;
+            float: left;  
+        }
+        footer {
+            height: 100px;
+            background-color: rgb(238, 46, 46);
+        }
+
+        @media (max-width:1200px){
+            main{width: 100%;}
+            .sec3{display: none;}
+            .sec1{width: 50%;}
+            .sec2{width: 50%;}
+            .box4{display: none;}
+            .box1{width: 31.33%;}
+            .box2{width: 31.33%;}
+            .box3{width: 31.33%;}
+        }
+
+        @media(max-width:900px){
+            main{width: 100%;}
+            .sec1{width: 100%;}
+            .sec2{width: 100%;}
+        }
+
+        @media(max-width:600px){
+            .art1{width: 100%;}
+            .art2{width: 100%;}
+            .art3{width: 100%;}
+            .sec1{width: 100%;}
+            .sec2{width: 100%;}
+            .sec3{width: 100%;}
+            .box1{width: 98%;}
+            .box2{width: 98%;}
+            .box3{width: 98%;}
+            .box4{display: none;}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header></header>
+        <aside></aside>
+        <article>
+            <article class="art1"></article>
+            <article class="art2"></article>
+            <article class="art3"></article>
+        </article>
+        <section>
+            <section class="sec1"></section>
+            <section class="sec2"></section>
+            <section class="sec3"></section>
+        </section>
+        <article>
+            <article class="box1"></article>
+            <article class="box2"></article>
+            <article class="box3"></article>
+            <article class="box4"></article>
+        </article>
+        <footer></footer>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //선언적 함수
+        function func1() {
+            document.write("func1이 실행되었습니다");
+        }
+        func1();
+        func1();
+        func1();
+        //fun1실행되었습니다가 세번나옴
+        
+        
+        //익명 함수(=뒤에 수식이 아닌 함수를 넣어주는것)
+        const func2 = function(){
+            document.write("func2이 실행되었습니다");
+        }
+        func2();
+        
+        
+        //매개변수가 있는 함수(값이 첫번째의 name로 전달되고 최종으로 도큐먼트의 name에 전달됨)
+        function func3(name){
+          document.write(name);     
+        }
+        func3("func3이 실행되었습니다, <br>");
+        
+        
+        //리턴값(결과)이 있는 함수
+        function func4(){
+           const str = "func4이 실행되었습니다, <br>"; //변수(도큐먼트가 없음 - 실행문)
+           return str;  //return은 결과값을 줘라 라는 뜻
+        }
+        document.write(func4());
+    </script>
+</body></html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap{}
+        #main{}
+        #header{
+            height: 100px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #header .logo{
+            width: 30%;
+            font-size: 25px;
+            font-weight: 800;
+            text-transform: uppercase;
+
+        }
+        #header .menu{
+            width: 50%;
+            font-weight: 400;
+            font-size: 18px;
+        }
+        #header .menu a{
+            color: #111;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        #header .log a{
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #111;
+            padding: 5px 20px 5px;
+            border-radius: 10px;
+            font-size: 10px;
+            background-color: rgb(230, 230, 230);
+        }
+        #nav{
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 30px;   
+        }
+        #nav a{
+            color: #111;
+            text-decoration: none;
+            margin-right: 15px;
+            display: inline;
+            
+        }
+        #banner{
+            height: 250px;
+            background-color: rgb(116, 179, 252);
+            text-align: center;
+            padding-top: 30px;
+            color: #fff;
+        }
+        #banner .ban_sub{
+            font-size: 10px;
+        }
+        #banner .ban_tit{
+            margin-top: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #banner .ban_text{
+            margin-top: 10px;
+            font-size: 15px;
+            opacity: 1;
+        }
+        #banner .ban_btn{
+            margin-top: 10px;
+            border: 1px solid #fff;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 5px 20px;
+            background: #fff;
+            color: rgb(129, 142, 252);
+            font-weight: bold;
+        }
+        #section{
+            height: 500px;
+            background: rgb(235, 245, 255);
+        }
+        .box{ 
+            position: relative;
+        }
+        .box1-1{     
+            position: absolute;
+            width: 350px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: #fff;
+            right: 400px;
+            top: 50px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px
+        }
+        .box1 img{
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box1-1 a{
+            text-decoration: none;
+        }
+        .box1-1 b{}
+        .box1-2{
+            position: absolute;
+            width: 350px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: #fff;
+            right: 400px;
+            top: 170px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px
+        }
+        .box1-2 a{
+            text-decoration: none;
+        }
+        .box1-2 b{}
+        .box1-3{
+            position: absolute;
+            width: 350px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: #fff;
+            right: 400px;
+            top: 290px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px
+        }
+        .box1-3 a{
+            text-decoration: none;
+        }
+        .box1-3 p{}
+        #footer{
+            height: 100px;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+        #footer .top{
+            padding-top: 10px;
+            opacity: 0.5;
+        }
+        #footer .login{
+            padding-top: 10px;
+            opacity: 0.5;
+        }
+        #footer .copy{
+            padding-top: 10px;
+            opacity: 0.5;
+        }
+        #footer.naver{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+        <header id="header">
+            <div class="logo">naver<br>influencer center
+            </div>
+            <div class="menu">
+                <a href="#">인플루언서 안내</a>
+                <a href="#">광고수익 혜택</a>
+                <a href="#">성장지원 프로그램</a>
+                <a href="#">브랜드커넥트</a>
+                <a href="#">공지</a>
+            </div>
+            <div class="log">
+                <a href="#">인플루언서로 로그인</a>
+            </div>
+        </header>
+        <nav id="nav">
+            <a href="#">크리에이터 워크숍</a>
+            <a href="#">슈퍼애드</a>
+            <a href="#">엑스퍼트 컨설팅</a>
+            <a href="#">멤버십 혜택</a>
+            <a href="#">어워드</a>
+        </nav>
+        <aside id="banner">
+            <p class="ban_sub">엑스퍼트 컨설팅</p>
+            <p class="ban_tit">법률, 세무부터 동영상 제작까지!<br>
+                지식 iN 엑스퍼트 상담, 클래스 이용을 지원합니다.</p>
+            <p class="ban_text">혼자서는 해결하기 어려웠던 문제들,<br>
+                1인 최대 10만원의 엑스퍼트 쿠폰으로 전문가의 도움을 받아보세요.</p>
+            <p class="ban_btn">내 eXpert 쿠폰 확인하기</p>
+        </aside>
+        <section id="section">
+            <section class="box">
+                <img src="../layout/img/제목 없음.png" alt="이미지">
+                <section class="box1-1">
+                    <p>이 이미지 쓰고 싶은데<br>저작권에 문제 없을까요?</p>
+                    <a href="#"><strong>법률상담받기</strong></a>
+                </section>
+                <section class="box1-2">
+                    <p>광고 수익에 대한 세금 신고<br>꼭 해야하나요? 어떻게 하죠?</p>
+                    <a href="#"><strong>세무상담받기</strong></a>
+                </section>
+                <section class="box1-3">
+                    <p>영상 콘텐츠 만들고 싶은데,<br>동영상 제작을 배우고 싶어요!</p>
+                    <a href="#"><strong>동영상제작상담</strong></a>
+                </section>
+            </section>
+        </section>
+        <footer id="footer">
+            <div class="top">top</div>
+            <div class="login">로그인</div>
+            <div class="copy">naver@sdfsfdf</div>
+            <div class="naver">naver</div>
+        </footer>
+    </main>
+    </div>
+    
+</body>
+</html>

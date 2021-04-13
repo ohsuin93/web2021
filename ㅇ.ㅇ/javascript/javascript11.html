@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+   <script>
+    let a = 100;                     //number
+    let b = "100";                   //string
+    
+    document.write(typeof a,"<br>")
+    document.write(typeof b,"<br>")
+       
+    //형변환(string -> number)
+    let c = Number(b);               //형변환 시킬때 number
+    document.write(typeof c,"<br>")  //string
+       
+    //형변환(number -> string)
+    let d = a = "" + a ;     //a; -> "" -> a
+    document.write(typeof a,"<br>")  //string
+       
+    //형변환(number -> string)
+    let e = String(c);
+    document.write(typeof e,"<br>"); //string
+    </script>
+    
+</body>
+</html>

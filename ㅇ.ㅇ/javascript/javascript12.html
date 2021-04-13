@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    //     배열
+    //    let arr1 = new Array();
+       
+    //    let arr2 = new Array(100,200,300);
+       
+    //    let arr3 = [];                  //3번과 4번 많이 씀
+       
+    //    let arr4 = [100,200,300];
+       
+    //    //배열 길이(갯수)구하기
+    //    document.write(arr5.length);    //length mdn 이라고 치면 표준문서로 검색가능
+       
+    //     //배열 데이터 가져오기
+    //     const arr6 = [100,200,300,400,500,600,700,800,900];
+    //     document.write(arr6[4]);
+
+    //     //for문
+    //     for( let i=0; i<arr6.length; i++ ){
+    //         document.write(arr6[i], "<br>");    
+
+    //     }
+
+    //     i=0 0<5 document.write(arr6[0]) --> 100
+    //     i=1 1<5 document.write(arr6[1]) --> 200
+    //     i=2 2<5 document.write(arr6[2]) --> 300
+    //     i=3 3<5 document.write(arr6[3]) --> 400
+    //     i=4 4<5 document.write(arr6[4]) --> 500
+    //     i=5 5<5 조건에 안맞아서 끝남 
+
+
+        //for Each
+        const arr7 = [100,200,300,400,500];
+
+        arr7.forEach(function(elem){
+            document.write(elem);
+        })
+
+        arr7.forEach(function(element,index,Array){
+        document.write(element,"<br>");
+        document.write(index,"<br>");
+        document.write(Array,"<br>");
+            
+        });
+
+        //map
+
+        const arr8 = [100,200,300,400,500];
+
+        arr8.map(function(elem){
+            document.write(elem)
+        });
+    </script>
+</body></html>
